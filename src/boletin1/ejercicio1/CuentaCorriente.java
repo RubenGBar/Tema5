@@ -1,4 +1,4 @@
-package boletin1;
+package boletin1.ejercicio1;
 
 /**
  * Clase para guardar la información de una cuenta corriente y sus operaciones básicas
@@ -45,14 +45,62 @@ public class CuentaCorriente {
 		}
 		this.saldo = saldo;
 	}
+	
+	/**
+	 * Función para obtener el atributo nombre de la clase
+	 * @return Devuelve el atributo nombre de la clase
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+	/**
+	 * Función que actualiza el atributo nombre
+	 * @param nombre Nombre con el que se actuliza el atributo
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	/**
+	 * Función para obtener el atributo DNI de la clase
+	 * @return Devuelve el atributo DNI de la clase
+	 */
+	public String getDni() {
+		return dni;
+	}
+	/**
+	 * Función para obtener el atributo saldo de la clase
+	 * @return Devuelve el atributo saldo de la clase
+	 */
+	public double getSaldo() {
+		return saldo;
+	}
 	/**
 	 * Función para sacar dinero
 	 * @param saldo Saldo al que sacar el dinero
 	 */
-	public void sacarDinero(double saldo) {
+	public boolean sacarDinero(double saldo) {
+		boolean transaccion = false;
 		if(this.saldo > saldo) {
-			
+			this.saldo -= saldo;
+			transaccion = true;
+		}
+		return transaccion;
+	}
+	/**
+	 * Función que incremento el saldo de la cuenta
+	 * @param saldo Cantidad a aumentar el saldo
+	 */
+	public void ingresarDinero(double saldo) {
+		if(saldo > 0) {
+			this.saldo += saldo;
 		}
 	}
-	
+	/**
+	 * Función que muestra la información de la clase
+	 */
+	public void mostrarInformacion() {
+		System.out.println("Cuenta de: " + this.nombre);
+		System.out.println("Con DNI: " + this.dni);
+		System.out.println("Tu sueldo es: " + this.saldo);
+	}
 }
