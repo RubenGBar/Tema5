@@ -39,7 +39,7 @@ public class Principal {
 				System.out.println("La cantidad a sustraer es mayor que el dinero en la cuenta.\n");
 			}
 			// Pregunto si quiere seguir realizando operaciones
-			System.out.println("Quiere seguir realizando operaciones?");
+			System.out.println("¿Quiere seguir realizando operaciones?");
 			// Limpio del teclado el caracter \n
 			sc.nextLine();
 			// Guardo lo introducido en teclado en seguir
