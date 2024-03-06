@@ -57,8 +57,8 @@ public class Punto {
 	 * @param y Cantidad a desplazar la coordenada Y
 	 */
 	public void desplaza(int x, int y) {
-		this.x = this.x + x;
-		this.y = this.y + y;
+		this.x += x;
+		this.y += y;
 	}
 	/**
 	 * Funciónn que calcula la distancia entre dos puntos
