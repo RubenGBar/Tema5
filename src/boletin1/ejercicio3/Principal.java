@@ -18,7 +18,7 @@ public class Principal {
 		int distancia = 0;
 		
 		// Pido que introduzca dos coordenadas para el punto 1
-		System.out.println("Introduzca la coordenada X e Y del punto: ");
+		System.out.println("Introduzca la coordenada X e Y del punto 1: ");
 		// Guardo lo introducido por teclado en X e Y respectivamente
 		x = sc.nextInt();
 		y = sc.nextInt();
@@ -33,17 +33,20 @@ public class Principal {
 		// Desplazo el punto
 		p1.desplaza(x, y);
 		// Muestro la nueva posición del punto
-		System.out.print("\nLa nueva distancia del punto es la siguiente: ");
+		System.out.print("\nLa nueva distancia del punto 1 es la siguiente: ");
 		p1.imprime();
 		
 		// Pido que introduzca dos coordenadas para el punto 2
-		System.out.println("\nIntroduzca la coordenada X e Y de otro punto: ");
+		System.out.println("\nIntroduzca la coordenada X e Y del punto 2: ");
 		// Guardo lo introducido por teclado en X e Y respectivamente
 		x = sc.nextInt();
 		y = sc.nextInt();
 		// Actualizo las coordenadas del objeto p1
 		p2.setXY(x, y);
-		
+		// Muestro la posición del punto
+		System.out.print("\nLa distancia del punto 2 es la siguiente: ");
+		p2.imprime();
+
 		// Calculo la distancia entre los dos puntos y lo muestro
 		distancia = p1.distancia(p1, p2);
 		System.out.println("\nLa distancia entre el primer y segundo punto es: " + distancia);
