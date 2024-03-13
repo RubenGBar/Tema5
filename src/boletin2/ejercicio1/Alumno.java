@@ -1,5 +1,9 @@
 package boletin2.ejercicio1;
 
+/**
+ * Clase alumno que representa los alumnos de un instituto o 
+ * un aula los cuales cuentan con un nombre y una nota media
+ */
 public class Alumno {
 	/**
 	 * Atributo en el que guardo el nombre del alumno
@@ -8,13 +12,13 @@ public class Alumno {
 	/**
 	 * Atributo en el que guardo la nota media del alumno
 	 */
-	private int notaMedia = 0;
+	private double notaMedia = 0;
 	/**
 	 * Constructor con parámetros
 	 * @param nombre Nombre del nuevo objeto alumno
 	 * @param notaMedia Nota del nuevo objeto alumno
 	 */
-	public Alumno(String nombre, int notaMedia) {
+	public Alumno(String nombre, double notaMedia) {
 		super();
 		if (nombre != null && !nombre.equals("")) {
 			this.nombre = nombre;
@@ -33,14 +37,14 @@ public class Alumno {
 	 * Función para obtener la nota media del alumno
 	 * @return Devuelve el atributo notaMedia
 	 */
-	public int getNotaMedia() {
+	public double getNotaMedia() {
 		return notaMedia;
 	}
 	/**
 	 * Modifico la nota media del alumno
 	 * @param notaMedia Nota con la que actualizar la nota media
 	 */
-	public void setNotaMedia(int notaMedia) {
+	public void setNotaMedia(double notaMedia) {
 		this.notaMedia = notaMedia;
 	}
 	/**
@@ -55,12 +59,7 @@ public class Alumno {
 	 */
 	@Override
 	public String toString() {
-		String cadena = "";
-		cadena += "-----------------------------------------------------";
-		cadena += "Nombre del Alumno: " + this.nombre + "\n";
-		cadena += "Nota media del Alumno: " + this.notaMedia + "\n";
-		cadena += "-----------------------------------------------------";
-		return cadena;
+		return this.nombre + " : " + this.notaMedia;
 	}
 	
 	
